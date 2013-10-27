@@ -6,6 +6,11 @@
 #
 #
 
+#show usage
+case $# in
+0) echo 'Usage: extract [compressed file]' 1>&2; exit 1
+esac
+
 
 # First we must check that the argument is actually a file.
 if [ ! -f "$@" ]
